@@ -1,1 +1,70 @@
+def logo():
+    print("     ___      .______       _______     ___           ______     ___       __        ______  __    __   __          ___   .___________.  ______   .______    ")   
+    print("    /   \     |   _  \     |   ____|   /   \         /      |   /   \     |  |      /      ||  |  |  | |  |        /   \  |           | /  __  \  |   _  \   ")    
+    print("   /  ^  \    |  |_)  |    |  |__     /  ^  \       |  ,----'  /  ^  \    |  |     |  ,----'|  |  |  | |  |       /  ^  \ `---|  |----`|  |  |  | |  |_)  |  ")     
+    print("  /  /_\  \   |      /     |   __|   /  /_\  \      |  |      /  /_\  \   |  |     |  |     |  |  |  | |  |      /  /_\  \    |  |     |  |  |  | |      /   ") 
+    print(" /  _____  \  |  |\  \----.|  |____ /  _____  \     |  `----./  _____  \  |  `----.|  `----.|  `--'  | |  `----./  _____  \   |  |     |  `--'  | |  |\  \----. ")  
+    print("/__/     \__\ | _| `._____||_______/__/     \__\     \______/__/     \__\ |_______| \______| \______/  |_______/__/     \__\  |__|      \______/  | _| `._____|")
+                                                                                                                                                                
 
+
+def square():
+  side = int(input("Enter the side length of the square:"))
+  area_or_square = side * side
+  print("The area of the square is:", area_or_square)
+  userChoice = input("Would you like to calculate somehting else\nEnter yes or no:")
+  if userChoice == 'yes':
+      mainMenu()
+  elif userChoice == 'no':
+        print("Have a nice day")
+
+
+  
+def rectangle():
+  length = int(input("Enter the length of the rectangle:"))
+  width = int(input("Enter the width of the rectangle:"))
+  area_of_rectangle = length * width
+  print("The area of the rectangle is:", area_of_rectangle)
+  userChoice = input("Would you like to calculate somehting else\nEnter yes or no:")
+  if userChoice == 'yes':
+      mainMenu()
+  elif userChoice == 'no':
+        print("Have a nice day")
+  
+def circle():
+  r = int(input("Enter the radius of the circle: "))
+  area_of_circle = 3.14 * r ** 2
+  print("The area of the circle is: ", area_of_circle)
+  userChoice = input("Would you like to calculate somehting else\nEnter yes or no:")
+  if userChoice == 'yes':
+      mainMenu()
+  elif userChoice == 'no':
+        print("Have a nice day")
+        
+def triangle():
+  base = int(input("Enter the base of the triangle: "))
+  height = int(input("Enter the height of the triangle: "))
+  area_of_triangle = base*height/2
+  print("The area of the triangle is: ", area_of_triangle)
+  userChoice = input("Would you like to calculate somehting else\nEnter yes or no:")
+  if userChoice == 'yes':
+      mainMenu()
+  elif userChoice == 'no':
+        print("Have a nice day")
+
+def mainMenu():
+  logo()
+  userChoice = input("Would you like to calculate for\nA square  (s)\nA rectangle  (r)\nA circle  (c)\nA triangle  (t)\n\nEnter your Choice:")
+  if userChoice == 's':
+    square()
+  elif userChoice == 'r':
+    rectangle()
+  elif userChoice == 'c':
+    circle()
+  elif userChoice == 't':
+    triangle()
+  else:
+    print("invalid choice. Please choose another letter.")
+    mainMenu()
+
+mainMenu()
